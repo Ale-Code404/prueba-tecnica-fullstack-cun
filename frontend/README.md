@@ -1,33 +1,53 @@
-# frontend
+# Solucion en Vue.js
 
-This template should help get you started developing with Vue 3 in Vite.
+**Premisa:** Desarrollar una interfaz para la consulta de cursos, lecciones y preguntas.
 
-## Recommended IDE Setup
+## Stack
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Vue.js 3 usando composition API
+- Axios
+- Tailwindcss
+- DaisyUI
 
-## Type Support for `.vue` Imports in TS
+## Arquitectura de la solución
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+En **/src/api** se estructuran los tipos y la comunicación con la API, en **/src/components** se crean todos los elementos reutilizables en las vistas de cada contexto y en **/src/views** se guardan todas las vistas del sistema.
 
-## Customize configuration
+A continuación parte de la estructura de carpetas de:
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
+```
+src/
+├── api
+├── components
+│   ├── courses
+│   └── lessons
+├── router
+└── views
+    ├── courses
+    └── lessons
 ```
 
-### Compile and Hot-Reload for Development
+## Cumplimiento de requisitos
 
-```sh
+### Obligatorios
+
+- [x] Requerimientos funcionales de la prueba
+
+## Como ejecutarlo
+
+### Paso a paso
+
+- Instalar Node.js 18 o superior.
+- Copiar el archivo .env.example a .env
+
+Ejecutar el proyecto en modo desarrollo
+
+```
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Para el crear el build de produccion en /dist
 
-```sh
+```
 npm run build
 ```
