@@ -20,5 +20,15 @@ class AppServiceProvider extends ServiceProvider
             \App\Services\Courses\Domain\CourseRepository::class,
             \App\Repositories\Courses\EloquentCourseRepository::class
         );
+
+        $this->app->bind(
+            \App\Services\Lessons\Domain\LessonRepository::class,
+            \App\Repositories\Lessons\EloquentLessonRepository::class
+        );
+
+        $this->app->bind(
+            \App\Services\Questions\Domain\QuestionRepository::class,
+            \App\Repositories\Questions\EloquentQuestionRepository::class
+        );
     }
 }

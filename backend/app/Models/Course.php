@@ -12,11 +12,14 @@ class Course extends Model
 {
     use HasFactory, HasUuids;
 
-    protected $keyType = 'string';
-
     protected $fillable = [
         'id',
         'name',
         'description',
     ];
+
+    public function lessons()
+    {
+        return $this->hasMany(Lesson::class);
+    }
 }

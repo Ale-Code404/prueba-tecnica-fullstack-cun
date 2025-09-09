@@ -22,10 +22,10 @@ class CourseController extends Controller
             'page' => 'sometimes|integer|min:1',
         ]);
 
-        $courses = $getCourses(
-            new CourseInput(page: $request->get('page', 1))
+        return CourseResource::collection(
+            $getCourses(
+                new CourseInput(page: $request->get('page', 1))
+            )
         );
-
-        return CourseResource::collection($courses);
     }
 }
