@@ -48,7 +48,7 @@ Aqui se plantean mejoras y características adicionales para aportar valor a la 
 
 -   [x] Tests de integración
 -   [x] El uso de capas/responsabilidades bien marcadas
--   [x] Documentación tecnica de la API autogenerada en **http://localhost:8080/docs/api**
+-   [x] Documentación tecnica de la API autogenerada en **http://localhost:8080/docs/api** y que permite exportar en formato OpenAPI (json) en **http://localhost:8080/docs/api.json**
 -   [x] Uso de un sistema de busqueda basado en indices.
 -   [x] Caching distribuido
 
