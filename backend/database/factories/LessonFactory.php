@@ -17,7 +17,7 @@ class LessonFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->sentence($this->faker->numberBetween(2, 5))
+            'name' => $this->faker->sentence($this->faker->numberBetween(6, 10))
         ];
     }
 }
