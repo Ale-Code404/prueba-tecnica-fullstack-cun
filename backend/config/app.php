@@ -123,4 +123,14 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Custom App's Configuration
+    |--------------------------------------------------------------------------
+    |
+    | Multiple custom configurations for the application.
+    |
+    */
+
+    'pagination' => 15
 ];
