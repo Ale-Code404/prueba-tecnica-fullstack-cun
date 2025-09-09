@@ -14,4 +14,10 @@ class EloquentQuestionRepository implements QuestionRepository
             ->where('lesson_id', $lessonId)
             ->get();
     }
+
+    public function findById(string $id): ?QuestionModel
+    {
+        return QuestionModel::query()
+            ->find($id);
+    }
 }

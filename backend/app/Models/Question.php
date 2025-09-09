@@ -12,6 +12,8 @@ class Question extends Model
 {
     use HasFactory, HasUuids;
 
+    protected $keyType = 'string';
+
     protected $fillable = [
         'id',
         'lesson_id',
@@ -23,4 +25,14 @@ class Question extends Model
     protected $casts = [
         'options' => 'array',
     ];
+
+    public function lesson()
+    {
+        return $this->belongsTo(Lesson::class);
+    }
+
+    public function isCorrect(string $answer): bool
+    {
+        return $this->correct_option == $answer;
+    }
 }
