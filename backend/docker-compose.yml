@@ -18,9 +18,9 @@ services:
   courses-db:
     image: postgres:15-alpine
     environment:
-      POSTGRES_USER: movies
-      POSTGRES_PASSWORD: movies_secret
-      POSTGRES_DB: movies
+      POSTGRES_USER: courses
+      POSTGRES_PASSWORD: courses_secret
+      POSTGRES_DB: courses
     volumes:
       - courses-db:/var/lib/postgresql/data
 

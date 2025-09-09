@@ -18,7 +18,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(
             \App\Services\Courses\Domain\CourseRepository::class,
-            \App\Repositories\Courses\EloquentCourseRepository::class
+            \App\Repositories\Courses\CachedEloquentCourseRepository::class
         );
 
         $this->app->bind(
