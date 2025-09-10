@@ -51,13 +51,24 @@ const getQuestions = (lessonId: string): Promise<Question[]> => {
       id: question.id,
       sentence: question.sentence,
       options: question.options.map((option: any) => ({
-        id: option.id,
+        id: option.uuid,
         answer: option.answer,
       })),
     }))
   })
 }
 
-export { getLessons, getQuestions }
+const answerQuestion = (questionId: string, answerId: string): Promise<boolean> => {
+  const data = {
+    question: questionId,
+    answer: answerId,
+  }
 
-export type { Lesson, LessonsResponse }
+  return client.post(`/evaluations`, data).then(({ data }) => {
+    return new Boolean(data.data.is_correct).valueOf()
+  })
+}
+
+export { getLessons, getQuestions, answerQuestion }
+
+export type { Lesson, Question, LessonsResponse }
