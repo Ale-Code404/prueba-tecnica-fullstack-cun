@@ -74,4 +74,10 @@ Ejecutar las migraciones y los seeders
 docker compose exec -it app php artisan migrate --seed
 ```
 
+Para ejecutar los test
+
+```
+docker compose exec -it app php artisan test
+```
+
 Si todo sale bien podremos visitar el proyecto en **http://localhost:8080**

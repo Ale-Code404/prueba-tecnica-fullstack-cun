@@ -12,6 +12,8 @@ class Lesson extends Model
 {
     use HasFactory, HasUuids;
 
+    protected $keyType = 'string';
+
     protected $fillable = [
         'id',
         'course_id',

@@ -19,8 +19,8 @@ class EvaluationController extends Controller
      * Evaluates a given answer for a question.
      * 
      */
-    #[BodyParameter(name: 'question', description: 'The ID of the question to evaluate.', required: true, example: '01993022-e030-7257-b4f0-10b83e0235e6s')]
-    #[BodyParameter(name: 'answer', description: 'The ID of the answer to evaluate.', required: true, example: '01993022-e030-7257-b4f0-10b83e0235e6a')]
+    #[BodyParameter(name: 'question', description: 'The UUID of the question to evaluate.', required: true, example: '01993022-e030-7257-b4f0-10b83e0235e6s')]
+    #[BodyParameter(name: 'answer', description: 'The UUID of the answer to evaluate.', required: true, example: '01993022-e030-7257-b4f0-10b83e0235e6a')]
     public function evaluate(Request $request, EvaluateAnswer $evaluateAnswer)
     {
         $request->validate([
